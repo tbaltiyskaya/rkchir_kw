@@ -1,0 +1,498 @@
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1.8fr 0.7fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "nav nav nav"
+    "main main main"
+    "footer footer footer";
+    background-color: #000000;
+}
+.nav {
+  grid-area: nav;
+}
+
+.main {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.7fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "title"
+    "articles";
+  grid-area: main;
+}
+
+.title {   
+  display: flex;
+  margin: 0;
+  height: 500px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background: #00f531; 
+  grid-area: title; 
+  justify-content:space-around;
+  overflow:hidden;
+}
+
+.text { 
+  grid-area: text; 
+  width: 30%;
+  margin-left: 150px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  }
+.textFon{
+  width: 110%;
+  margin-top: 10%;
+  padding-bottom: 10%;
+  text-align: center;
+  background-color: white;
+  box-shadow: 10px 5px 5px rgb(0, 0, 0);
+}
+.text h1{
+  color: #000000;
+  text-shadow: 0px 3px 0px #821c6c,
+  0px 14px 10px rgba(0,0,0,0.15),
+  0px 24px 2px rgba(0,0,0,0.1),
+  0px 34px 30px rgba(0,0,0,0.1);
+  height: 80px;
+  font-family: 'Jost';
+  font-weight: 700;
+  font-style: italic;
+  font-size: 60px;
+  line-height: 80%;
+  width: 100%;
+}
+.text p{
+  margin:auto;
+  margin-top: 10%;
+  width: 110%;
+  text-align:center;
+  justify-content: stretch;
+  font-family:  'Yanone Kaffeesatz';
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+}
+.pictures {
+   grid-area: pictures; 
+   display: flex;
+   flex-wrap:nowrap;
+   flex-direction: row;
+   justify-content:flex-end;
+   margin: 0;
+   width: 50%;
+  }
+  .pr1{
+    position:relative; 
+    z-index: 1;
+    width:70px; 
+    height:180px;
+    background: #ee72f8;
+    left: 90%; 
+    top: -10%; 
+    transform: rotate(-30deg);
+    border-radius: 0 0 50px 50px;
+    animation-name: moveDiagonally1;
+    animation-duration: 3s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+  }
+  .pr2{
+    position:relative; 
+    z-index: 1;
+    width: 65px; 
+    height:230px;
+    background: #ef036c;;
+    left: 40%; 
+    top: -60%; 
+    transform: rotate(-30deg);
+    border-radius: 0 0 50px 50px;
+    animation-name: moveDiagonally2;
+    animation-duration: 3s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+  }
+  .pr3{
+    position:relative; 
+    z-index: 1;
+    width: 70px; 
+    height:400px;
+    left: 100%;
+    top: 30%;
+    background: #ef036c;
+    transform: rotate(-30deg);
+    border-radius: 50px 50px 0 0;
+    animation-name: moveDiagonally3;
+    animation-duration: 3s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+  }
+  .pr4{
+    position:relative; 
+    z-index: 1;
+    width: 75px;  
+    height:420px;
+    left: 70%;
+    top: -30%;
+    background: #ee72f8; 
+    transform: rotate(-30deg);
+    border-radius: 50px 50px 0 0;
+    animation-name: moveDiagonally4;
+    animation-duration: 3s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+  }
+  .tsytata{
+    position:relative;
+    top: 10%;
+    left:-10%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 10px 5px 5px rgb(0, 0, 0);
+  }
+  .tsytata p{
+    margin:auto;
+    text-align:center;
+    justify-content: stretch;
+    font-family:  'Yanone Kaffeesatz';
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+  }
+  .k1, .k2, .k3{
+      width: 300px;
+      bottom: 0;
+      position: relative;
+      left: -5%;
+    }
+  .k2 img{
+      position: absolute;
+      width: 120%;
+      right: -30%;
+      bottom: 0;
+    }
+  .k2 img:hover{
+      transform: scale(105%);
+      transition: all ,1s, linear;
+    }
+  .kart1 img{
+      position: absolute;
+      width: 120%;
+      bottom:-510px;
+      left: -80%;
+      z-index: 10;
+    }
+  .kart2 img{
+      position: absolute;
+      width: 120%;
+      bottom:-510px;
+      z-index: 10;
+    }
+  .kart3 img{
+      position: absolute;
+      width: 130%;
+      bottom:-510px;
+      right: -100%;
+      z-index: 8;
+    }
+.articles { 
+  /*background-color: rgb(247, 234, 234);*/
+  background-image: url(https://avatanplus.com/files/resources/original/5eb4162838b8c171ef768d28.jpg) ;
+  grid-area: articles;
+  height: 500px;
+}
+.articles{
+position: relative;
+display: flex;
+justify-content: space-around;
+gap:20px;
+padding-top: 50px;
+padding-left: 100px;
+padding-right: 100px;
+}
+
+.articles .card{
+position: relative;
+cursor: pointer;
+}
+
+.articles .card .face{
+width: 300px;
+height: 200px;
+transition: 0.5s;
+}
+
+.articles .card .face.face1{
+position: relative;
+background: #333;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1;
+transform: translateY(100px);
+overflow: hidden;
+border-radius: 10px 10px 10px 10px;
+}
+
+.articles .card:hover .face.face1{
+background: wheat;
+transform: translateY(0);
+border-radius: 10px 10px 0 0;
+}
+
+.articles .card .face.face1 .content{
+transition: 0.5s;
+}
+
+.articles .card:hover .face.face1 .content{
+opacity: 1;
+}
+
+.articles .card .face.face1 .content img{
+object-fit: cover;
+max-width: 130%;
+}
+
+.articles .card .face.face1 .content h3{
+margin: 10px 0 0;
+padding: 0;
+color: #fff;
+text-align: center;
+left:0px;
+bottom:150px;
+text-align:center;
+text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+font-family:'Yanone Kaffeesatz';
+font-size: 45px;
+font-weight: 700;
+line-height: 70%;
+}
+
+.articles .card .face.face2{
+position: relative;
+background: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+box-sizing: border-box;
+box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+transform: translateY(-100px);
+border-radius: 10px 10px 10px 10px;
+}
+
+.articles .card:hover .face.face2{
+transform: translateY(0);
+border-radius: 0 0 10px 10px;
+}
+
+.articles .card .face.face2 .content p{
+margin: 0;
+padding: 0;
+text-align: center;
+  font-family:'Yanone Kaffeesatz';
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.articles .card .face.face2 .content a{
+margin: 15px 70px 0;
+display:  inline-block;
+text-decoration: none;
+font-family: 'Jost';
+font-weight: 600;
+font-size: 30px;
+text-align: center;
+color: #000000;
+padding: 5px;
+border: 1px solid #000000;
+}
+
+.articles .card .face.face2 .content a:hover{
+background: #000000;
+color: #fff;
+}
+.articles .card:hover .face.face1 .content img{
+filter: blur(3px);
+}
+
+@media screen and (max-width: 1000px){
+.articles{
+    height: 900px;
+}
+.articles {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap:10px;
+}
+.articles .card .face{
+    width: 300px;
+    height: 140px;
+    transition: 0.5s;
+}
+.articles .card .face.face1{
+    transform: translateY(40px);
+}
+.articles .card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    left:0px;
+    bottom:150px;
+}
+}
+.footer {
+  grid-area: footer;
+}
+
+@media screen and (max-width: 900px){
+  .title{
+      flex-direction: column;
+      height: 550px;
+      justify-content: space-around;
+      align-items:stretch;
+  }
+  .text {
+    margin: auto;
+    margin-left: 20%;
+    margin-right: -20%;
+  }
+  .textFon{
+    width: 180%;
+    margin: auto;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .text h1{
+    margin: auto;
+    padding: 10px;
+    font-size: 50px;
+    text-align: center;
+  }
+  .text p{
+    margin: auto;
+    padding-top: 10%;
+    width: 200%;
+    font-size: 20px;
+  }
+  .pictures{
+      display: flex;
+      flex-wrap:nowrap;
+      height: 200px;
+      width: 80%;
+      flex-direction: row;
+      justify-content:center;
+      margin: auto;
+      bottom: 0;
+    }
+    .k1, .k2, .k3{
+      bottom: -30px;
+    }
+  .pr1, .pr2, .pr3, .pr4, .tsytata{
+    visibility: hidden;
+    animation-name: none;
+  }
+    .k2 img{
+      position: absolute;
+      width: 120%;
+      right: -30%;
+      bottom: 0;
+      z-index: 10;
+    }
+  .k2 img:hover{
+      transform: scale(105%);
+      transition: all ,1s, linear;
+    }
+  .kart1 img{
+      position: absolute;
+      width: 140%;
+      bottom:-210px;
+      left: -100%;
+    }
+  .kart2 img{
+      position: absolute;
+      width: 140%;
+      bottom:-210px;
+      left:5%;
+    }
+  .kart3 img{
+      position: absolute;
+      width: 145%;
+      bottom:-220px;
+      right: -130%;
+    }
+    .popular{
+      background-color: #000;
+    }
+}
+html, body , .container {
+  height: 100%;
+  margin: 0;
+}
+@keyframes moveDiagonally1 {
+  0% {
+    height:180px;
+  }
+  100% {
+    height:250px;
+  }
+}
+@keyframes moveDiagonally2{
+0% {
+  height:210px;
+}
+100% {
+  height:360px;
+}
+}
+@keyframes moveDiagonally3{
+0% {
+  height:260px;
+}
+100% {
+  height:490px;
+}
+}
+@keyframes moveDiagonally4{
+0% {
+  height:280px;
+}
+100% {
+  height:450px;
+}
+}
+
+
+
+/* For presentation only, no need to copy the code below */
+.container * {
+  /*border: 1px solid rgb(100, 100, 100);*/
+  position: relative;
+}
+.container *:after {
+  position: absolute;
+  /*content:attr(class);*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+

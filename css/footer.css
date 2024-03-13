@@ -1,0 +1,186 @@
+.footer {
+    grid-area: footer;
+    height: 500px;
+    background: #000000; 
+    background-size: 400%; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  .footer > div{
+    width: calc(100%/3);
+    min-width: 200px;
+}
+  .logo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    }
+   .logo p{
+    font-family: 'Yanone Kaffeesatz';
+    font-weight: 300;
+    color:white;
+    }
+    .logo + div{
+    width: 80%;
+    text-align: center;
+    }
+    .logo img{
+    margin:auto;
+    width: 200px;
+    text-align: center;
+  }
+   .rules { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .rules div{
+    text-align: center;
+    margin: 20px;
+    width: 240px;
+    height: 40px;
+    }
+    .rules div a{
+        font-size: 30px;
+        text-align: center;
+        text-decoration: none;
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 400;
+        color: rgb(255, 255, 255);
+    }
+    .rules div a:hover{
+        text-decoration:underline;
+    }
+    .rules div a:active{
+        text-decoration:underline;
+    color: rgb(255, 255, 255);
+    }
+    .rules p{
+        text-align: center;
+    }
+    .social { 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    }
+    .ikonka{
+        height: 60px;
+        width: 260px;
+        display: flex;
+        flex-direction:row;
+        flex-wrap: nowrap;
+        margin-top: 40px;
+        justify-content:space-around;
+    }
+    .ikonka div{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border: 6px solid rgb(255, 255, 255);
+        background-color: rgb(255, 255, 255);
+    }
+    .ikonka div:hover{
+        animation-name: socsetianim;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+        border: 4px solid rgb(255, 255, 255);
+        background-color: rgb(255, 255, 255);
+    }
+    .ikonka img{
+        text-align: center;
+        width: 84%;
+        left: 3px;
+        top: 3px;
+    }
+    .socText{
+    width: 260px;
+    margin-top: 50px;
+    }
+     .socText p{
+        text-align: center;
+        font-size: 28px;
+        font-family:  'Yanone Kaffeesatz';
+        font-weight: 400; 
+        color: white;
+    }
+    @media screen and (max-width: 1000px){
+        
+        .footer{
+            height: 700px;
+            flex-direction: column-reverse;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .footer > div{
+            height: calc(100%/3);
+            width: 100%;
+        }
+        .logo{
+            display: flex;
+            flex-direction:row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo + div{
+            width: 10%;
+            text-align: center;
+        }
+        .logo img{
+            text-align: center;
+            margin:auto;
+            width: 50px;
+        }
+        .logo p{
+            font-size: 30px;
+        }
+        .rules{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        }
+        .rules div{
+            margin: 20px;
+            width: 180px;
+            height: 40px;
+            justify-content: center;
+        }
+        .rules div a{
+        margin: auto;
+        font-size: 17px;
+        }
+        .ikonka{
+            justify-content:center;
+            gap:30px;
+        }
+        .socText p{
+            text-align: center;
+            font-size: 15px;
+            
+        }
+    }
+      @keyframes socsetianim{   
+        from {     
+            border: 4px solid rgb(255, 255, 255);
+            background-color: rgb(255, 255, 255); 
+        }   
+        to {
+            border: 4px solid rgb(255, 255, 255);
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 0px 5px 5px rgb(255, 255, 255);
+         }
+      }

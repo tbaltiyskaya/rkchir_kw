@@ -1,0 +1,188 @@
+.cont {  display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    grid-template-rows: 0.3fr 3fr 0.7fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "nav nav nav"
+      "rek1 main rek2"
+      "footer footer footer";
+      background-color: #000000;
+  }
+  
+  .nav { 
+    grid-area: nav;
+    background-color: #000000;
+ }
+  
+  .footer { 
+    z-index: 2;grid-area: footer;
+  }
+  .main {
+    margin: 0;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background: linear-gradient(#ee72f8, #000);
+}
+
+.container {
+    width: 400px;
+    max-width: 400px;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+    border: dashed 4px #000;
+    background: #ffffff;
+}
+
+.container,
+.form__input,
+.form__button {
+  font-family: 'Jost';
+  font-weight: 400;
+}
+
+.form--hidden {
+    display: none;
+}
+
+.form > *:first-child {
+    margin-top: 0;
+}
+
+.form > *:last-child {
+    margin-bottom: 0;
+}
+
+.form__title {
+  margin-bottom: 2rem;
+  color: #000000;
+  text-shadow: 0px 3px 0px #821c6c,
+  0px 14px 10px rgba(0,0,0,0.15),
+  0px 24px 2px rgba(0,0,0,0.1),
+  0px 34px 30px rgba(0,0,0,0.1);
+  font-family: 'Jost';
+  font-weight: 700;
+  font-style: italic;
+  font-size: 60px;
+  line-height: 80%;
+  text-align: center;
+}
+
+.form__message {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form__message--success {
+    color: #4bb544;
+}
+
+.form__message--error {
+    color: #cc3333;
+}
+
+.form__input-group {
+    margin-bottom: 1rem;
+}
+
+.form__input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: #eeeeee 0.2s, border-color 0.2s;
+}
+
+.form__input:focus {
+    border-color: #ee72f8;
+    background: #ffffff;
+}
+
+.form__input--error {
+    color: #cc3333;
+    border-color: #cc3333;
+}
+
+.form__input-error-message {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #cc3333;
+}
+
+.form__button {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    background: #ee72f8;
+}
+
+.form__button:hover {
+    background: #ee72f8;
+}
+
+.form__button:active {
+    transform: scale(0.98);
+}
+
+.form__text {
+    text-align: center;
+}
+
+.form__link {
+    color: #252c6a;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form__link:hover {
+    text-decoration: underline;
+}
+  .rek2 { 
+    z-index: 0;
+    grid-area: rek2;
+    background-image: url(https://avatanplus.com/files/resources/original/5eb4162838b8c171ef768d28.jpg) ;
+    }
+  
+  .rek1 { 
+    z-index: 0;grid-area: rek1; 
+    background-image: url(https://avatanplus.com/files/resources/original/5eb4162838b8c171ef768d28.jpg) ; }
+  
+  html, body , .cont {
+    height: 100%;
+    margin: 0;
+  }
+  
+  /* For presentation only, no need to copy the code below */
+  
+  .cont * {
+    position: relative;
+    /*border: 1px solid rgb(100, 100, 100);*/
+  }
+  
+  .cont *:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  

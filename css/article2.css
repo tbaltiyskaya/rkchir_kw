@@ -1,0 +1,178 @@
+.container {  display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    grid-template-rows: 0.3fr 3fr 0.7fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "nav nav nav"
+      "rek1 article rek2"
+      "footer footer footer";
+      background-color: #000000;
+  }
+  
+  .nav { 
+    grid-area: nav;
+    background-color: #000000;
+ }
+  
+  .footer { 
+    z-index: 2;grid-area: footer; }
+  
+  .article {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "titleArticle"
+      "textArticle";
+    grid-area: article;
+    z-index: 1;
+    background: linear-gradient(180deg, #4f4f4f, #000);
+  }
+  
+  .titleArticle { 
+    grid-area: titleArticle;
+    justify-content: center;
+    gap:10px;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    position: absolute;
+     }
+    .titleArticle img{
+      height: 120%;
+      z-index: 1;
+    }
+  .textArticle {
+     grid-area: textArticle;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content:space-around;
+     }
+     
+  .textArticle div{
+    padding:10px 10px 20px 10px;
+  }
+    .titleArticle h2{
+        margin: auto;
+        color: #000000;
+        text-shadow: 0px 3px 0px #ffffff,
+          0px 14px 10px rgba(0,0,0,0.15),
+          0px 24px 2px rgba(0,0,0,0.1),
+          0px 34px 30px rgba(0,0,0,0.1);
+        font-family: 'Jost';
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 80%;
+        text-align: center;
+        position: relative;
+        margin-top: -35%;
+        z-index: 2;
+     }
+     .textArticle .text p{
+        margin: 0px 80px;
+        text-align:justify;
+        font-family:'Yanone Kaffeesatz';
+        font-size: 24px;
+        color:#ffffff;
+        text-indent: 20px;
+     }
+     .textArticle .picture{
+        margin: auto;
+        height: 350px;
+        overflow: hidden;
+     }
+     .textArticle #stanok{
+      float: left;
+      padding-left: 80px;
+      margin-right: 20px;
+     }
+     .textArticle img{
+      object-fit: cover;
+      max-width: 100%;
+      max-height: 100%;
+     }
+     .textArticle .video{
+        margin: 30px auto;
+     }
+     .video iframe{
+      width:560px;
+      height:315px;
+     }
+  .rek2 { 
+    z-index: 0;
+    grid-area: rek2;
+    background-image: url(https://avatanplus.com/files/resources/original/5eb4162838b8c171ef768d28.jpg) ;
+    }
+  
+  .rek1 { 
+    z-index: 0;grid-area: rek1; 
+    background-image: url(https://avatanplus.com/files/resources/original/5eb4162838b8c171ef768d28.jpg) ; }
+  
+  @media screen and (max-width: 1000px){
+    .container {  display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 3fr 0.7fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "nav "
+          "article"
+          "footer";
+      }
+      .titleArticle h2{
+        font-size: 45px;
+        text-align: center;
+        position: relative;
+        margin-top: -28%;
+        z-index: 2;
+      }
+      .textArticle .picture{
+        height: 300px;
+        width: 400px;
+     }
+     .video iframe{
+        width:360px;
+        height:240px;
+     }
+     .titleArticle img{
+      width: 80%;
+    }
+    .textArticle #stanok{
+      float: none;
+      text-align: center;
+      padding-left: 0px;
+      margin-right: 20%;
+     }
+     .textArticle #stanok img{
+      text-align: center;
+      max-width: 100%;
+     }
+  }
+  html, body , .container {
+    height: 100%;
+    margin: 0;
+  }
+  
+  /* For presentation only, no need to copy the code below */
+  
+  .container * {
+    position: relative;
+    /* border: 1px solid rgb(100, 100, 100);*/
+  }
+  
+  .container *:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  

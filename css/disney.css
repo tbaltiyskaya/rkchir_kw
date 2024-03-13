@@ -1,0 +1,202 @@
+.main{
+    background: linear-gradient(180deg, #4f4f4f, #000);
+}
+.block-person{
+    height: 900px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 5fr;
+    gap: 0px 40px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "block-person-p block-person-h"
+    "block-person-p block-person-t";
+    margin: auto;
+    width: 90%;
+}
+.block-person-p{
+    grid-area: block-person-p;
+    margin: auto;
+    object-fit: cover;
+}
+.block-person-p img{
+    width: 100%;
+    text-align: center;
+}
+.block-person-h{
+    grid-area: block-person-h;
+    margin: auto;
+}
+.block-person-h img{
+    margin-top: 16%;
+    margin-left: 0px;
+    width: 110%;
+    position: absolute;
+    z-index: 1;
+    object-fit: fill;
+}
+.block-person-h h2{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-family: 'Jost';
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 80%;
+    text-shadow: 0px 3px 0px #ffffff,
+    0px 14px 10px rgba(0,0,0,0.15),
+    0px 24px 2px rgba(0,0,0,0.1),
+    0px 34px 30px rgba(0,0,0,0.1);
+}
+.block-person-t{
+    grid-area: block-person-t;
+    margin: auto;
+    margin-top: -5px;
+    background-image: url(https://avatanplus.com/files/resources/original/5eb4162838b8c171ef768d28.jpg);
+    border: double 5px #000;
+}
+.block-person-t p{
+    text-align:center;
+    margin: 20px;
+    justify-content: stretch;
+    font-family:  'Yanone Kaffeesatz';
+    font-size: 25px;
+}
+.block-history{
+    padding-top:100px;
+    padding-bottom: 100px;
+    height: 2900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 100px 40px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "block-history-t1 block-history-t2"
+    "block-history-t3 block-history-t4"
+    "block-history-t5 block-history-t6";
+    margin: auto;
+    width: 90%;
+}
+.block-history-t1{
+    grid-area: block-history-t1;
+}
+.block-history-t2{
+    grid-area: block-history-t2;
+    margin: auto;
+    overflow: hidden;
+}
+.block-history-t3{
+    grid-area: block-history-t3;
+    margin: auto;
+    overflow: hidden;
+}
+.block-history-t4{
+    grid-area: block-history-t4;
+}
+.block-history-t5{
+    grid-area: block-history-t5;
+
+}
+.block-history-t6{
+    grid-area: block-history-t6;
+    margin: auto;
+    overflow: hidden;
+}
+.block-history img{
+    object-fit: fill;
+    width: 100%;
+}
+.block-history-t1, .block-history-t4, .block-history-t5 {
+    margin: auto;
+    text-align:justify;
+    font-family:'Yanone Kaffeesatz';
+    font-size: 24px;
+    color:#ffffff;
+}
+.block-history-t2, .block-history-t3, .block-history-t6 {
+    display: block;
+    height: 70%;
+    object-fit: cover;
+}
+.block-history img{
+    object-fit: cover;
+    max-width:100%;
+    max-height:100%;
+}
+@media screen and (max-width: 800px){
+    .block-person{
+        height: 1000px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr 3fr;
+        gap: 10px 0px;
+        grid-auto-flow:column;
+        grid-template-areas:
+        "block-person-h"
+        "block-person-p"
+        "block-person-t";
+    }
+    .block-person-h h2{
+        font-size: 40px;
+    }
+    .block-person-h img{
+        margin-top: 10px;
+        margin-left: -10%;
+        height: 90%;
+        width: 120%;
+        position: absolute;
+        z-index: 1;
+        object-fit: fill;
+    }
+    .block-person-t p{
+        text-align:center;
+        justify-content: stretch;
+        font-family:  'Yanone Kaffeesatz';
+        font-size: 20px;
+    }
+    .block-person-p img{
+        height: 80%;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1100px){
+    .block-history{
+        padding-top:100px;
+        padding-bottom: 100px;
+        height: 2800px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "block-history-t1"
+        "block-history-t2"
+        "block-history-t4"
+        "block-history-t3"
+        "block-history-t5"
+        "block-history-t6";
+        margin: auto;
+        width: 90%;
+    }
+    .block-history p{
+        font-size: 18px;
+    }
+}
+.container * {
+    /*border: 1px solid rgb(100, 100, 100);*/
+    position: relative;
+  }
+  .container *:after {
+    position: absolute;
+    /*content:attr(class);*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+  }
